@@ -1,0 +1,374 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #09090F;
+    color: #F3F4F6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2146;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C3AFF;
+}
+
+/* Glassmorphism & Velvet Glows */
+.glass-panel {
+  background: rgba(24, 19, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(28, 22, 49, 0.8) 0%, rgba(18, 14, 30, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ====================================================
+   ✨ UIVERSE CREATLYDEV BUTTON (Hemen Keşfet Butonu)
+   ==================================================== */
+.btn-creatly {
+  --clr: #8C3AFF;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, #FF3B77 0%, #8C3AFF 100%);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0.85rem 1.6rem;
+  padding-left: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 0 25px rgba(255, 59, 119, 0.45);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-creatly:hover {
+  background: linear-gradient(135deg, #8C3AFF 0%, #FF3B77 100%);
+  box-shadow: 0 0 35px rgba(140, 58, 255, 0.75), 0 0 20px rgba(255, 59, 119, 0.5);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-creatly .button__icon-wrapper {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  color: #8C3AFF;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-creatly .button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.btn-creatly:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.btn-creatly:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+/* ====================================================
+   ⚡ UIVERSE MRHYDDENN SHINING BEAM RISK BADGE
+   ==================================================== */
+.uiverse-risk-badge {
+  position: relative;
+  padding: 5px 12px;
+  border-radius: 9px;
+  border: 1px solid var(--risk-border, #3d6aff);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: rgba(14, 10, 26, 0.85);
+  color: var(--risk-color, #fff);
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 0.25s ease-in-out;
+  cursor: default;
+}
+
+.uiverse-risk-badge:hover {
+  background: var(--risk-bg-hover, rgba(61, 106, 255, 0.25));
+  box-shadow: 0 0 16px 2px var(--risk-glow, rgba(0, 142, 236, 0.6));
+  transform: translateY(-1px);
+}
+
+.uiverse-risk-badge:hover::before {
+  animation: sh02 0.5s 0s linear;
+}
+
+.uiverse-risk-badge::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: var(--risk-color, #fff);
+  box-shadow: 0 0 35px 20px var(--risk-border, #3d6aff);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+/* ====================================================
+   🔮 CYBERPUNK BADGE BY CHASE2K25 (Ağ & Altyapı)
+   ==================================================== */
+.cyber-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #1a0033 0%, #0a0f1f 100%);
+  border: 1.5px solid #ff00ff;
+  border-radius: 9px;
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.6),
+    inset -2px -2px 5px rgba(51, 25, 77, 0.3),
+    0 0 10px rgba(255, 0, 255, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff99ff;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.6);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cyber-badge:hover {
+  background: linear-gradient(135deg, #003344 0%, #0a0f1f 100%);
+  border-color: #00ffff;
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.6),
+    inset -2px -2px 5px rgba(0, 255, 255, 0.2),
+    0 0 14px rgba(0, 255, 255, 0.6);
+  transform: translateY(-1px) scale(1.03);
+}
+
+/* ====================================================
+   🔍 UIVERSE INPUT BY YASEEN549
+   ==================================================== */
+.uiverse-input {
+  color: white;
+  border: 2px solid #8707ff;
+  border-radius: 12px;
+  padding: 8px 16px 8px 38px;
+  background: rgba(20, 14, 36, 0.75);
+  width: 100%;
+  outline: none;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.uiverse-input::placeholder {
+  color: #8E87A8;
+}
+
+.uiverse-input:focus,
+.uiverse-input:active {
+  box-shadow: 2px 2px 15px #8707ff inset, 0 0 14px rgba(135, 7, 255, 0.5);
+  border-color: #a855f7;
+  background: rgba(24, 17, 44, 0.95);
+}
+
+/* ====================================================
+   🎴 UIVERSE ROTATING GRADIENT BORDER CARD (ElSombrero2)
+   ==================================================== */
+.uiverse-card {
+  width: 100%;
+  background: #140E24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 18px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.uiverse-card:hover {
+  transform: translateY(-2px);
+}
+
+.uiverse-card .card-content {
+  border-radius: 16px;
+  background: #160F2B;
+  width: calc(100% - 3px);
+  margin: 1.5px;
+  z-index: 1;
+  padding: 12px 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uiverse-card .card-content::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: " ";
+  display: block;
+  background: white;
+  width: 5px;
+  height: 50px;
+  position: absolute;
+  filter: blur(40px);
+  overflow: hidden;
+}
+
+.uiverse-card:hover .card-content::before {
+  opacity: 1;
+}
+
+.uiverse-card::before {
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 240px;
+  background: linear-gradient(#ff2288, #387ef0);
+  transition: opacity 300ms;
+  animation: rotation_9018 6000ms infinite linear;
+  animation-play-state: paused;
+}
+
+.uiverse-card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.uiverse-card::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 14, 36, 0.2);
+  backdrop-filter: blur(40px);
+}
+
+@keyframes rotation_9018 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ====================================================
+   🌐 UIVERSE SOCIAL MEDIA SLIDING ICONS (X & INSTAGRAM)
+   ==================================================== */
+.socialcontainer {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.socialcontainer:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(140, 58, 255, 0.45);
+}
+
+.social-icon-1,
+.social-icon-2,
+.social-icon-3 {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.social-icon-1 {
+  background-color: #000000;
+}
+
+.socialcontainer:hover .social-icon-1 {
+  transform: translateY(-44px);
+}
+
+.social-icon-2 {
+  background: linear-gradient(
+    72.44deg,
+    #ff7a00 11.92%,
+    #ff0169 51.56%,
+    #d300c5 85.69%
+  );
+}
+
+.socialcontainer:hover .social-icon-2 {
+  transform: translateY(-44px);
+}
+
+.social-icon-3 {
+  background-color: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+  transform: translateY(-44px);
+}
+
