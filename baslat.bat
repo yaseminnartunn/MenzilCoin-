@@ -1,7 +1,7 @@
 @echo off
-title Zenox Crypto Portal
+title Menzil Crypto Portal
 echo ==============================================
-echo   Zenox Crypto & Meme Hub Baslatiliyor...
+echo   Menzil Crypto & Meme Hub Baslatiliyor...
 echo ==============================================
 echo.
 start http://localhost:8080
