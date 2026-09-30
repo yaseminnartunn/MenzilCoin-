@@ -1,10 +1,11 @@
 @echo off
 title Menzil Crypto Portal
+cd /d "%~dp0"
 echo ==============================================
 echo   Menzil Crypto & Meme Hub Baslatiliyor...
 echo ==============================================
 echo.
-start http://localhost:8080
-npm run dev
+npm run dev -- --open
 pause
+
 
