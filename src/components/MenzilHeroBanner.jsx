@@ -12,15 +12,9 @@ export default function MenzilHeroBanner({ onSelectMenzil }) {
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
         
-        {/* Sol Alan: Görsel 3 Tarzı Lüks Tipografi ve Butonlar */}
+        {/* Sol Alan: Tipografi ve Butonlar */}
         <div className="flex-1 space-y-5 text-center lg:text-left">
-          
-          {/* Görsel 3 Üst Yıldızlı Rozet */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[11px] sm:text-xs font-bold tracking-wider uppercase backdrop-blur-md shadow-inner">
-            <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-            <span>RESMİ EKOSİSTEM PARA BİRİMİ • MNZ</span>
-            <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-          </div>
+
 
           {/* Görsel 3 Tipografisine Uygun İddialı Başlık (Serif & Sans Karışımı) */}
           <div className="space-y-2">
