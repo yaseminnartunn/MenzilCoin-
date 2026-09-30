@@ -4,15 +4,11 @@ import SocialLinks from './SocialLinks';
 
 export default function MenzilHeroBanner({ onSelectMenzil }) {
   return (
-    <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-[#2A1207] via-[#1E0B04] to-[#120502] border border-amber-500/35 p-6 sm:p-10 shadow-2xl shadow-amber-950/40">
+    <div className="relative py-4 sm:py-6 px-2 sm:px-4">
       
-      {/* Görsel 3 Tarzı Yan Dekoratif Kavis Çerçeveleri (Ambient Arch Borders) */}
-      <div className="absolute top-4 bottom-4 left-3 w-16 border-l border-amber-500/20 rounded-l-3xl pointer-events-none hidden sm:block" />
-      <div className="absolute top-4 bottom-4 right-3 w-16 border-r border-amber-500/20 rounded-r-3xl pointer-events-none hidden sm:block" />
+      {/* Yumuşak Ambient Işık Parıltısı (Sayfa Arka Planına Doğrudan Uyumlu) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Arka Plan Işık & Yıldız Parıltıları */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-600/15 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
         
